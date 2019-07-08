@@ -31,7 +31,7 @@
 	<build>
 
 		<sourceDirectory>src/main</sourceDirectory>
-		<testSourceDirectory>src/main/tests/junit</testSourceDirectory>
+		<testSourceDirectory>src/tests/junit</testSourceDirectory>
 
 		<pluginManagement><!-- lock down plugins versions to avoid using Maven 
 				defaults (may be moved to parent pom) -->
