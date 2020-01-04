@@ -270,9 +270,9 @@ public class AntStructure extends Task {
             v.addElement(TASKS);
         }
 
-        Enumeration enum = ih.getNestedElements();
-        while (enum.hasMoreElements()) {
-            v.addElement(enum.nextElement());
+        Enumeration enume = ih.getNestedElements();
+        while (enume.hasMoreElements()) {
+            v.addElement(enume.nextElement());
         }
 
         if (v.isEmpty()) {
@@ -298,9 +298,9 @@ public class AntStructure extends Task {
         sb.append(name);
         sb.append(lSep).append("          id ID #IMPLIED");
 
-        enum = ih.getAttributes();
-        while (enum.hasMoreElements()) {
-            String attrName = (String) enum.nextElement();
+        enume = ih.getAttributes();
+        while (enume.hasMoreElements()) {
+            String attrName = (String) enume.nextElement();
             if ("id".equals(attrName)) {
               continue;
             }

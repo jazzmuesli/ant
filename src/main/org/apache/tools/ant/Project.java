@@ -1193,10 +1193,10 @@ public class Project {
         synchronized (createdTasks) {
             Vector v = (Vector) createdTasks.get(type);
             if (v != null) {
-                Enumeration enum = v.elements();
-                while (enum.hasMoreElements()) {
+                Enumeration enume = v.elements();
+                while (enume.hasMoreElements()) {
                     WeakishReference ref =
-                            (WeakishReference) enum.nextElement();
+                            (WeakishReference) enume.nextElement();
                     Task t = (Task) ref.get();
                     //being a weak ref, it may be null by this point
                     if (t != null) {
@@ -2232,9 +2232,9 @@ public class Project {
             if (props == null) {
                 return;
             }
-            Enumeration enum = props.propertyNames();
-            while (enum.hasMoreElements()) {
-                String key = (String) enum.nextElement();
+            Enumeration enume = props.propertyNames();
+            while (enume.hasMoreElements()) {
+                String key = (String) enume.nextElement();
                 Class taskClass = getTask(key);
                 if (taskClass != null) {
                     // This will call a get() and a put()

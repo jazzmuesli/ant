@@ -198,7 +198,7 @@ public final class TailFilter
            System.arraycopy(buffer, 0, newBuffer, 0, i);
            buffer = newBuffer;
 
-           // don´t forget to set the "lastposition" new
+           // dont forget to set the "lastposition" new
            bufferPos = i;
         }
 

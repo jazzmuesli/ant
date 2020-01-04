@@ -186,9 +186,9 @@ public class Target implements TaskContainer {
      */
     public Task[] getTasks() {
         Vector tasks = new Vector(children.size());
-        Enumeration enum = children.elements();
-        while (enum.hasMoreElements()) {
-            Object o = enum.nextElement();
+        Enumeration enume = children.elements();
+        while (enume.hasMoreElements()) {
+            Object o = enume.nextElement();
             if (o instanceof Task) {
                 tasks.addElement(o);
             }
@@ -301,9 +301,9 @@ public class Target implements TaskContainer {
      */
     public void execute() throws BuildException {
         if (testIfCondition() && testUnlessCondition()) {
-            Enumeration enum = children.elements();
-            while (enum.hasMoreElements()) {
-                Object o = enum.nextElement();
+            Enumeration enume = children.elements();
+            while (enume.hasMoreElements()) {
+                Object o = enume.nextElement();
                 if (o instanceof Task) {
                     Task task = (Task) o;
                     task.perform();

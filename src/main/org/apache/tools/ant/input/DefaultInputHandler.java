@@ -108,14 +108,14 @@ public class DefaultInputHandler implements InputHandler {
         if (request instanceof MultipleChoiceInputRequest) {
             StringBuffer sb = new StringBuffer(prompt);
             sb.append("(");
-            Enumeration enum = 
+            Enumeration enume = 
                 ((MultipleChoiceInputRequest) request).getChoices().elements();
             boolean first = true;
-            while (enum.hasMoreElements()) {
+            while (enume.hasMoreElements()) {
                 if (!first) {
                     sb.append(",");
                 }
-                sb.append(enum.nextElement());
+                sb.append(enume.nextElement());
                 first = false;
             }
             sb.append(")");

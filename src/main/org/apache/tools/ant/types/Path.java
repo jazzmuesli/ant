@@ -473,9 +473,9 @@ public class Path extends DataType implements Cloneable {
             return;
         }
 
-        Enumeration enum = elements.elements();
-        while (enum.hasMoreElements()) {
-            Object o = enum.nextElement();
+        Enumeration enume = elements.elements();
+        while (enume.hasMoreElements()) {
+            Object o = enume.nextElement();
             if (o instanceof Reference) {
                 o = ((Reference) o).getReferencedObject(p);
             }

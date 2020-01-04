@@ -145,9 +145,9 @@ public class ClassPathLoader {
      */
     public Hashtable getClasses() throws IOException {
         Hashtable map = new Hashtable();
-        Enumeration enum = loaders();
-        while (enum.hasMoreElements()) {
-            FileLoader loader = (FileLoader) enum.nextElement();
+        Enumeration enume = loaders();
+        while (enume.hasMoreElements()) {
+            FileLoader loader = (FileLoader) enume.nextElement();
             System.out.println("Processing " + loader.getFile());
             long t0 = System.currentTimeMillis();
             ClassFile[] classes = loader.getClasses();

@@ -138,9 +138,9 @@ public class ServerDeploy extends Task {
      *  a failure occurs in the deployment process.
      */
     public void execute() throws BuildException {
-        for (Enumeration enum = vendorTools.elements(); 
-             enum.hasMoreElements();) {
-            HotDeploymentTool tool = (HotDeploymentTool) enum.nextElement();
+        for (Enumeration enume = vendorTools.elements(); 
+             enume.hasMoreElements();) {
+            HotDeploymentTool tool = (HotDeploymentTool) enume.nextElement();
             tool.validateAttributes();
             tool.deploy();
         }

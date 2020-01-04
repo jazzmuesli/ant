@@ -339,10 +339,10 @@ public class RuntimeConfigurable implements Serializable {
             ProjectHelper.addText(p, wrappedObject, characters.substring(0));
         }
 
-        Enumeration enum = children.elements();
-        while (enum.hasMoreElements()) {
+        Enumeration enume = children.elements();
+        while (enume.hasMoreElements()) {
             RuntimeConfigurable child
-                    = (RuntimeConfigurable) enum.nextElement();
+                    = (RuntimeConfigurable) enume.nextElement();
             if (child.wrappedObject instanceof Task) {
                 Task childTask = (Task) child.wrappedObject;
                 childTask.setRuntimeConfigurableWrapper(child);

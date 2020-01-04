@@ -472,10 +472,10 @@ public abstract class Task extends ProjectComponent {
      */
     private void replaceChildren(RuntimeConfigurable wrapper,
                                  UnknownElement parentElement) {
-        Enumeration enum = wrapper.getChildren();
-        while (enum.hasMoreElements()) {
+        Enumeration enume = wrapper.getChildren();
+        while (enume.hasMoreElements()) {
             RuntimeConfigurable childWrapper =
-                (RuntimeConfigurable) enum.nextElement();
+                (RuntimeConfigurable) enume.nextElement();
             UnknownElement childElement =
                 new UnknownElement(childWrapper.getElementTag());
             parentElement.addChild(childElement);

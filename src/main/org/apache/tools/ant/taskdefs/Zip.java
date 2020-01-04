@@ -1073,9 +1073,9 @@ public class Zip extends MatchingTask {
         entries.clear();
         addingNewFiles = false;
         doUpdate = savedDoUpdate;
-        Enumeration enum = filesetsFromGroupfilesets.elements();
-        while (enum.hasMoreElements()) {
-            ZipFileSet zf = (ZipFileSet) enum.nextElement();
+        Enumeration enume = filesetsFromGroupfilesets.elements();
+        while (enume.hasMoreElements()) {
+            ZipFileSet zf = (ZipFileSet) enume.nextElement();
             filesets.removeElement(zf);
         }
         filesetsFromGroupfilesets.removeAllElements();

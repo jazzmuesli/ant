@@ -132,9 +132,9 @@ public class Copydir extends MatchingTask {
                 log("Copying " + filecopyList.size() + " file"
                     + (filecopyList.size() == 1 ? "" : "s")
                     + " to " + destDir.getAbsolutePath());
-                Enumeration enum = filecopyList.keys();
-                while (enum.hasMoreElements()) {
-                    String fromFile = (String) enum.nextElement();
+                Enumeration enume = filecopyList.keys();
+                while (enume.hasMoreElements()) {
+                    String fromFile = (String) enume.nextElement();
                     String toFile = (String) filecopyList.get(fromFile);
                     try {
                         getProject().copyFile(fromFile, toFile, filtering,

@@ -194,9 +194,9 @@ public class XMLReport {
         // Iterate over the classpath to identify reference classes
         classFiles = new Hashtable();
         ClassPathLoader cpl = new ClassPathLoader(classPath);
-        Enumeration enum = cpl.loaders();
-        while (enum.hasMoreElements()) {
-            ClassPathLoader.FileLoader fl = (ClassPathLoader.FileLoader) enum.nextElement();
+        Enumeration enume = cpl.loaders();
+        while (enume.hasMoreElements()) {
+            ClassPathLoader.FileLoader fl = (ClassPathLoader.FileLoader) enume.nextElement();
             ClassFile[] classes = fl.getClasses();
             log("Processing " + classes.length + " classes in " + fl.getFile());
             // process all classes

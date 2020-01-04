@@ -70,9 +70,9 @@ import org.apache.tools.ant.BuildException;
 public class Or extends ConditionBase implements Condition {
 
     public boolean eval() throws BuildException {
-        Enumeration enum = getConditions();
-        while (enum.hasMoreElements()) {
-            Condition c = (Condition) enum.nextElement();
+        Enumeration enume = getConditions();
+        while (enume.hasMoreElements()) {
+            Condition c = (Condition) enume.nextElement();
             if (c.eval()) {
                 return true;
             }

@@ -190,9 +190,9 @@ public class JUnitTask extends Task {
      * @since Ant 1.5
      */
     public void setFiltertrace(boolean value) {
-        Enumeration enum = allTests();
-        while (enum.hasMoreElements()) {
-            BaseTest test = (BaseTest) enum.nextElement();
+        Enumeration enume = allTests();
+        while (enume.hasMoreElements()) {
+            BaseTest test = (BaseTest) enume.nextElement();
             test.setFiltertrace(value);
         }
     }

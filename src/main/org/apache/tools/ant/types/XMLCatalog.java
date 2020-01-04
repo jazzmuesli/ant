@@ -373,9 +373,9 @@ public class XMLCatalog extends DataType
         // Add all nested elements to our catalog
         Vector newElements = catalog.getElements();
         Vector ourElements = getElements();
-        Enumeration enum = newElements.elements();
-        while (enum.hasMoreElements()) {
-            ourElements.addElement(enum.nextElement());
+        Enumeration enume = newElements.elements();
+        while (enume.hasMoreElements()) {
+            ourElements.addElement(enume.nextElement());
         }
 
         // Append the classpath of the nested catalog
@@ -597,10 +597,10 @@ public class XMLCatalog extends DataType
      *         of the Resource or null if no such information is available.
      */
     private ResourceLocation findMatchingEntry(String publicId) {
-        Enumeration enum = getElements().elements();
+        Enumeration enume = getElements().elements();
         ResourceLocation element = null;
-        while (enum.hasMoreElements()) {
-            Object o = enum.nextElement();
+        while (enume.hasMoreElements()) {
+            Object o = enume.nextElement();
             if (o instanceof ResourceLocation) {
                 element = (ResourceLocation)o;
                 if (element.getPublicId().equals(publicId)) {
