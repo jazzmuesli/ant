@@ -138,7 +138,7 @@ cp src/script/antRun bin
 chmod +x bin/antRun
 
 echo ... Building Ant Distribution
-
+echo "Using classpath $CLASSPATH"
 "${JAVACMD}" -classpath "${CLASSPATH}" -Dant.home=. $ANT_OPTS org.apache.tools.ant.Main -emacs "$@" bootstrap
 ret=$?
 if [ $ret != 0 ]; then  
@@ -149,7 +149,7 @@ fi
 
 echo ... Cleaning Up Build Directories
 
-rm -rf ${CLASSDIR}
-rm -rf bin
+#rm -rf ${CLASSDIR}
+#rm -rf bin
 
 echo ... Done Bootstrapping Ant Distribution
