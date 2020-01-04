@@ -208,7 +208,7 @@
 	<build>
 
 		<sourceDirectory>src/main</sourceDirectory>
-		<testSourceDirectory>src/tests/junit</testSourceDirectory>
+		<testSourceDirectory>src/testcases</testSourceDirectory>
 
 		<plugins>
 			<plugin>
@@ -216,7 +216,6 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<configuration>
 					<excludes>
-
 						<exclude>org/apache/tools/ant/taskdefs/optional/extension/Javah*.java</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/extension/Native2Ascii*.java</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/extension/sitraka/*.java</exclude>
@@ -227,14 +226,15 @@
 						<exclude>org/apache/tools/ant/taskdefs/optional/Xslp*</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/starteam/*.java</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/ejb/*.java</exclude>
-						
+
 						<exclude>org/apache/tools/ant/taskdefs/optional/ide/VA*.java</exclude>
-						<!-- 
-						<exclude>org/apache/tools/ant/taskdefs/optional/extension/*.java</exclude>
-						
-						<exclude>org/apache/tools/ant/taskdefs/optional/*.java</exclude>
-						 -->
+						<!-- <exclude>org/apache/tools/ant/taskdefs/optional/extension/*.java</exclude> 
+							<exclude>org/apache/tools/ant/taskdefs/optional/*.java</exclude> -->
 					</excludes>
+					<testExcludes>
+						<exclude>org/apache/tools/ant/taskdefs/optional/Xalan*.java</exclude>
+						<exclude>org/apache/tools/ant/taskdefs/optional/XslpLiaisonTest*.java</exclude>
+					</testExcludes>
 				</configuration>
 			</plugin>
 			<plugin>

@@ -56,8 +56,10 @@ package org.apache.tools.ant.taskdefs;
 import java.sql.Driver;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.sql.DriverPropertyInfo;
 import java.util.Properties;
+import java.util.logging.Logger;
 import java.io.File;
 import java.net.URL;
 
@@ -260,6 +262,10 @@ public class SQLExecTest extends TestCase {
 
         public int getMajorVersion() {
             return 0;
+        }
+        
+        public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+        	return null;
         }
 
         public int getMinorVersion() {
