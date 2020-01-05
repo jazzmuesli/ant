@@ -239,10 +239,10 @@ public class JarTest extends BuildFileTest {
         try {
             executeTarget("testIndexTests");
             archive = new ZipFile(getProject().resolveFile(tempJar));
-            Enumeration enum = archive.entries();
+            Enumeration enume = archive.entries();
             int numberOfIndexLists = 0;
-            while (enum.hasMoreElements()) {
-                ZipEntry ze = (ZipEntry) enum.nextElement();
+            while (enume.hasMoreElements()) {
+                ZipEntry ze = (ZipEntry) enume.nextElement();
                 if (ze.getName().equals("META-INF/INDEX.LIST")) {
                     numberOfIndexLists++;
                 }

@@ -431,9 +431,9 @@ public class XMLReport {
         int total_lines = 0;
 
         // use the map for access, all nodes should be there
-        Enumeration enum = pkgMap.elements();
-        while (enum.hasMoreElements()) {
-            Element pkgElem = (Element) enum.nextElement();
+        Enumeration enume = pkgMap.elements();
+        while (enume.hasMoreElements()) {
+            Element pkgElem = (Element) enume.nextElement();
             String pkgname = pkgElem.getAttribute("name");
             Element[] classes = getClasses(pkgElem);
             int pkg_calls = 0;

@@ -698,10 +698,10 @@ public class NetRexxC extends MatchingTask {
                  + (filecopyList.size() == 1 ? "" : "s")
                  + " to " + destDir.getAbsolutePath());
 
-            Enumeration enum = filecopyList.keys();
+            Enumeration enume = filecopyList.keys();
 
-            while (enum.hasMoreElements()) {
-                String fromFile = (String) enum.nextElement();
+            while (enume.hasMoreElements()) {
+                String fromFile = (String) enume.nextElement();
                 String toFile = (String) filecopyList.get(fromFile);
 
                 try {

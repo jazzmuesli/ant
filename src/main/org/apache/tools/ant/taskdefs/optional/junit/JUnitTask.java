@@ -208,9 +208,9 @@ public class JUnitTask extends Task {
      * @since Ant 1.2
      */
     public void setHaltonerror(boolean value) {
-        Enumeration enum = allTests();
-        while (enum.hasMoreElements()) {
-            BaseTest test = (BaseTest) enum.nextElement();
+        Enumeration enume = allTests();
+        while (enume.hasMoreElements()) {
+            BaseTest test = (BaseTest) enume.nextElement();
             test.setHaltonerror(value);
         }
     }
@@ -227,9 +227,9 @@ public class JUnitTask extends Task {
      * @since Ant 1.4
      */
     public void setErrorProperty(String propertyName) {
-        Enumeration enum = allTests();
-        while (enum.hasMoreElements()) {
-            BaseTest test = (BaseTest) enum.nextElement();
+        Enumeration enume = allTests();
+        while (enume.hasMoreElements()) {
+            BaseTest test = (BaseTest) enume.nextElement();
             test.setErrorProperty(propertyName);
         }
     }
@@ -246,9 +246,9 @@ public class JUnitTask extends Task {
      * @since Ant 1.2
      */
     public void setHaltonfailure(boolean value) {
-        Enumeration enum = allTests();
-        while (enum.hasMoreElements()) {
-            BaseTest test = (BaseTest) enum.nextElement();
+        Enumeration enume = allTests();
+        while (enume.hasMoreElements()) {
+            BaseTest test = (BaseTest) enume.nextElement();
             test.setHaltonfailure(value);
         }
     }
@@ -265,9 +265,9 @@ public class JUnitTask extends Task {
      * @since Ant 1.4
      */
     public void setFailureProperty(String propertyName) {
-        Enumeration enum = allTests();
-        while (enum.hasMoreElements()) {
-            BaseTest test = (BaseTest) enum.nextElement();
+        Enumeration enume = allTests();
+        while (enume.hasMoreElements()) {
+            BaseTest test = (BaseTest) enume.nextElement();
             test.setFailureProperty(propertyName);
         }
     }
@@ -286,9 +286,9 @@ public class JUnitTask extends Task {
      * @since Ant 1.2
      */
     public void setFork(boolean value) {
-        Enumeration enum = allTests();
-        while (enum.hasMoreElements()) {
-            BaseTest test = (BaseTest) enum.nextElement();
+        Enumeration enume = allTests();
+        while (enume.hasMoreElements()) {
+            BaseTest test = (BaseTest) enume.nextElement();
             test.setFork(value);
         }
     }
@@ -653,8 +653,8 @@ public class JUnitTask extends Task {
                                       + propsFile.getAbsolutePath());
         Hashtable p = getProject().getProperties();
         Properties props = new Properties();
-        for (Enumeration enum = p.keys(); enum.hasMoreElements();) {
-            Object key = enum.nextElement();
+        for (Enumeration enume = p.keys(); enume.hasMoreElements();) {
+            Object key = enume.nextElement();
             props.put(key, p.get(key));
         }
         try {

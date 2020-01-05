@@ -1,0 +1,4 @@
+wget http://archive.apache.org/dist/xml/xalan-j/binaries/xalan-j_1_0_0.tar.gz
+unzip xalan-j_1_0_0.tar.gzz
+cp xalan_1_0_0/xalan.jar lib/xalan-1_0.jar
+mvn install:install-file -Dfile=lib/xalan-1_0.jar -DgroupId=xalan -DartifactId=xalan -Dversion=1.0.0 -Dpackaging=jar

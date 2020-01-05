@@ -195,9 +195,9 @@ public class IntrospectionHelperTest extends TestCase {
         h.put("fourteen", java.lang.StringBuffer.class);
         h.put("fifteen", java.lang.StringBuffer.class);
         IntrospectionHelper ih = IntrospectionHelper.getHelper(getClass());
-        Enumeration enum = ih.getNestedElements();
-        while (enum.hasMoreElements()) {
-            String name = (String) enum.nextElement();
+        Enumeration enume = ih.getNestedElements();
+        while (enume.hasMoreElements()) {
+            String name = (String) enume.nextElement();
             Class expect = (Class) h.get(name);
             assertNotNull("Support for "+name+" in IntrospectioNHelperTest?",
                           expect);
@@ -408,9 +408,9 @@ public class IntrospectionHelperTest extends TestCase {
         h.put("name", java.lang.String.class);
 
         IntrospectionHelper ih = IntrospectionHelper.getHelper(getClass());
-        Enumeration enum = ih.getAttributes();
-        while (enum.hasMoreElements()) {
-            String name = (String) enum.nextElement();
+        Enumeration enume = ih.getAttributes();
+        while (enume.hasMoreElements()) {
+            String name = (String) enume.nextElement();
             Class expect = (Class) h.get(name);
             assertNotNull("Support for "+name+" in IntrospectionHelperTest?",
                           expect);

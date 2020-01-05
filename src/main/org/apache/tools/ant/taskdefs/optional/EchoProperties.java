@@ -351,9 +351,9 @@ public class EchoProperties extends Task {
     protected void saveProperties(Hashtable allProps, OutputStream os)
              throws IOException, BuildException {
         Properties props = new Properties();
-        Enumeration enum = allProps.keys();
-        while (enum.hasMoreElements()) {
-            String name = enum.nextElement().toString();
+        Enumeration enume = allProps.keys();
+        while (enume.hasMoreElements()) {
+            String name = enume.nextElement().toString();
             String value = allProps.get(name).toString();
             if (prefix == null || name.indexOf(prefix) == 0) {
                 props.put(name, value);

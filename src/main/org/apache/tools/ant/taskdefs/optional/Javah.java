@@ -443,9 +443,9 @@ public class Javah extends Task {
             }
         }
 
-        Enumeration enum = classes.elements();
-        while (enum.hasMoreElements()) {
-            ClassArgument arg = (ClassArgument) enum.nextElement();
+        Enumeration enume = classes.elements();
+        while (enume.hasMoreElements()) {
+            ClassArgument arg = (ClassArgument) enume.nextElement();
             String aClass = arg.getName();
             cmd.createArgument().setValue(aClass);
             niceClassList.append("    " + aClass + lSep);
