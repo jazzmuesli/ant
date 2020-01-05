@@ -205,9 +205,9 @@
 						<exclude>org/apache/tools/ant/taskdefs/optional/extension/Native2Ascii*.java</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/extension/sitraka/*.java</exclude>
 						<!-- <exclude>org/apache/tools/ant/taskdefs/optional/extension/Xalan*</exclude> 
+						<exclude>org/apache/tools/ant/taskdefs/optional/junit/Xalan*</exclude>
 							<exclude>org/apache/tools/ant/taskdefs/optional/Xalan*</exclude> -->
 						<exclude>org/apache/tools/ant/taskdefs/optional/scm/*Star*.java</exclude>
-						<exclude>org/apache/tools/ant/taskdefs/optional/junit/Xalan*</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/Xslp*</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/starteam/*.java</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/ejb/*.java</exclude>
