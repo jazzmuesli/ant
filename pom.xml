@@ -187,7 +187,7 @@
 	<build>
 
 		<sourceDirectory>src/main</sourceDirectory>
-		<testSourceDirectory>src/testcases</testSourceDirectory>
+		<testSourceDirectory>src/testcases, src/test/java</testSourceDirectory>
 		<testResources>
 			<testResource>
 				<directory>src/etc/testcases</directory>
