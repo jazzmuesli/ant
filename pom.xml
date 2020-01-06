@@ -187,7 +187,8 @@
 	<build>
 
 		<sourceDirectory>src/main</sourceDirectory>
-		<testSourceDirectory>src/testcases, src/test/java</testSourceDirectory>
+		<!--  easier to export to mvn -Drat.skip=true -DtargetFolder=src/testcases  -Dsandbox_mode=OFF -Duse_separate_classloader=false org.evosuite.plugins:evosuite-maven-plin:LATEST:export  -->
+		<testSourceDirectory>src/testcases</testSourceDirectory>
 		<testResources>
 			<testResource>
 				<directory>src/etc/testcases</directory>
@@ -195,6 +196,7 @@
 		</testResources>
 
 		<plugins>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -203,20 +205,13 @@
 						<exclude>org/apache/tools/ant/taskdefs/optional/extension/Javah*.java</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/extension/Native2Ascii*.java</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/extension/sitraka/*.java</exclude>
-						<!-- <exclude>org/apache/tools/ant/taskdefs/optional/extension/Xalan*</exclude> 
-						<exclude>org/apache/tools/ant/taskdefs/optional/junit/Xalan*</exclude>
-							<exclude>org/apache/tools/ant/taskdefs/optional/Xalan*</exclude> -->
 						<exclude>org/apache/tools/ant/taskdefs/optional/scm/*Star*.java</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/Xslp*</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/starteam/*.java</exclude>
 						<exclude>org/apache/tools/ant/taskdefs/optional/ejb/*.java</exclude>
-
 						<exclude>org/apache/tools/ant/taskdefs/optional/ide/VA*.java</exclude>
-						<!-- <exclude>org/apache/tools/ant/taskdefs/optional/extension/*.java</exclude> 
-							<exclude>org/apache/tools/ant/taskdefs/optional/*.java</exclude> -->
 					</excludes>
 					<testExcludes>
-						<!-- <exclude>org/apache/tools/ant/taskdefs/optional/Xalan*.java</exclude> -->
 						<exclude>org/apache/tools/ant/taskdefs/optional/XslpLiaisonTest*.java</exclude>
 					</testExcludes>
 				</configuration>
